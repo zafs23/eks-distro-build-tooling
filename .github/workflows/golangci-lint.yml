@@ -24,6 +24,7 @@ jobs:
         uses: golangci/golangci-lint-action@v3
         with:
           version: v1.29
+          skip-go-installation: true
           working-directory: 'tools/eksDistroBuildToolingOpsTools'
           # Disable package caching to avoid a double cache with setup-go.
           skip-pkg-cache: true
