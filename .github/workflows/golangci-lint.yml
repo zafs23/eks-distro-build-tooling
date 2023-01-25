@@ -26,7 +26,6 @@ jobs:
         with:
           version: latest
           working-directory: 'tools/eksDistroBuildToolingOpsTools'
-          only-new-issues: true
           # Disable package caching to avoid a double cache with setup-go.
           path_to_write_report: tools/eksDistroBuildToolingOpsTools/codecov_report.txtcodecov_report.txt
           skip-pkg-cache: true
