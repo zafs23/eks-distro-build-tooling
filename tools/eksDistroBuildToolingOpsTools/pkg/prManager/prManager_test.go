@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	HttpOkStatusCode = 2000
+	HttpOkStatusCode = 200
 )
 
 var baseBranchSha = "940a814c746924db2019139e3de9ca9f2d60c22d"
