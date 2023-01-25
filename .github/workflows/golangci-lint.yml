@@ -5,6 +5,8 @@ on:
       - v*
     branches:
       - main
+      - feature
+      - test-lint
   pull_request:
 permissions:
   contents: read
