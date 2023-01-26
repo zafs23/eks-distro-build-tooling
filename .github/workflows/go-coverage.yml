@@ -1,0 +1,23 @@
+name: Test coverage
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - main
+      - test-lint
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: "1.18"
+      - name: Run go test with coverage
+        run: go test -race -coverprofile=coverage.out -covermode=atomic
+      - name: Codecov upload
+        uses: codecov/codecov-action@v3.1.0
+        with:
+          working-directory: 'tools/eksDistroBuildToolingOpsTools'
