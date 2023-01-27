@@ -17,8 +17,6 @@ jobs:
       - name: Run go test with coverage
         run: |
           go test ./... -race -coverprofile=coverage.out -covermode=atomic
-        with:
-          working-directory: 'tools/eksDistroBuildToolingOpsTools'
       - name: Codecov upload
         uses: codecov/codecov-action@v3.1.0
         with:
