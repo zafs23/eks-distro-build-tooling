@@ -1,13 +1,5 @@
 name: Test coverage
 on:
-  push:
-    tags:
-      - v*
-    branches:
-      - main
-    paths:
-      - 'tools/eksDistroBuildToolingOpsTools/**'
-
   pull_request:
 jobs:
   build:
